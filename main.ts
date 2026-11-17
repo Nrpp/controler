@@ -1,3 +1,7 @@
+input.onPinPressed(TouchPin.P0, function () {
+    // Musica
+    radio.sendNumber(7)
+})
 input.onLogoEvent(TouchButtonEvent.Pressed, function () {
     // Parar
     radio.sendNumber(5)
