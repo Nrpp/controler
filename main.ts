@@ -3,7 +3,7 @@ input.onPinPressed(TouchPin.P0, function () {
     radio.sendNumber(7)
 })
 input.onLogoEvent(TouchButtonEvent.Pressed, function () {
-    // Parar
+    // Parar del todo
     girando = false
     radio.sendNumber(5)
 })
@@ -18,7 +18,6 @@ input.onGesture(Gesture.Shake, function () {
 })
 let girando = false
 radio.setGroup(5)
-// Mantiene el giro mientras A o B estén pulsados, y para al soltarlos
 basic.forever(function () {
     if (input.buttonIsPressed(Button.AB)) {
         // Adelante
@@ -36,8 +35,8 @@ basic.forever(function () {
         girando = true
         basic.pause(100)
     } else if (girando) {
-        // Si acabas de soltar A o B, manda parar
-        radio.sendNumber(5)
+        // Al soltar A o B, avisa que terminó el giro (código 8)
+        radio.sendNumber(8)
         girando = false
     }
 })
