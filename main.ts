@@ -1,5 +1,5 @@
 input.onPinPressed(TouchPin.P0, function () {
-    // Musica
+    // Cambiar / Reproducir Musica
     radio.sendNumber(7)
 })
 input.onLogoEvent(TouchButtonEvent.Pressed, function () {
@@ -11,7 +11,7 @@ input.onButtonPressed(Button.A, function () {
     radio.sendNumber(3)
 })
 input.onLogoEvent(TouchButtonEvent.LongPressed, function () {
-    // Pipi
+    // Piiipi (Claxon)
     radio.sendNumber(6)
 })
 input.onGesture(Gesture.Shake, function () {
